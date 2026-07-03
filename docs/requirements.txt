@@ -1,0 +1,6 @@
+# Documentation site toolchain. Install with:
+#   pip install -r docs/requirements.txt
+mkdocs-material>=9.5,<10
+mkdocs-material[imaging]  # social cards + optimized images
+pymdown-extensions>=10.7
+mkdocs-minify-plugin>=0.8

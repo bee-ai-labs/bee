@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & Discussions
+    url: https://github.com/bee-ai-labs/bee/discussions
+    about: Ask questions, share ideas, or get learning help. Not sure if it's a bug? Start here.
+  - name: 🔒 Report a Security Issue
+    url: https://github.com/bee-ai-labs/bee/security/advisories/new
+    about: Please report vulnerabilities privately — do NOT open a public issue.
+  - name: 🛟 Support & How-To
+    url: https://github.com/bee-ai-labs/bee/blob/main/SUPPORT.md
+    about: How to get help and ask a great question.

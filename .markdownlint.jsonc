@@ -1,0 +1,29 @@
+{
+  // markdownlint config — https://github.com/DavidAnson/markdownlint
+  // Balanced ruleset: strict enough to keep docs consistent, relaxed where
+  // technical writing legitimately needs flexibility.
+  "default": true,
+
+  // Line length: prose wraps naturally; don't fight long links, tables, or code.
+  "MD013": {
+    "line_length": 120,
+    "code_blocks": false,
+    "tables": false,
+    "headings": false
+  },
+
+  // Allow inline HTML — we use <div align="center">, <details>, <img>, badges.
+  "MD033": false,
+
+  // First line need not be a top-level heading (front matter, badges block).
+  "MD041": false,
+
+  // Duplicate headings are fine if not siblings (e.g. "Overview" per section).
+  "MD024": { "siblings_only": true },
+
+  // Ordered lists may use 1. 1. 1. style (nicer diffs).
+  "MD029": { "style": "ordered" },
+
+  // Emphasis-as-heading is intentional in a few callouts.
+  "MD036": false
+}

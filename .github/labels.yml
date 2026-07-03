@@ -1,0 +1,79 @@
+# Label definitions synced by the "Sync Labels" workflow (EndBug/label-sync).
+# Edit here → labels update on GitHub. Keep colors consistent with the 🐝 palette.
+
+# --- Type ---
+- name: bug
+  color: "d73a4a"
+  description: Something is wrong — broken link, error, or incorrect fact
+- name: content
+  color: "0e8a16"
+  description: New or improved documentation/content
+- name: example
+  color: "1d76db"
+  description: Runnable example code
+- name: enhancement
+  color: "a2eeef"
+  description: Improvement to existing content or tooling
+- name: proposal
+  color: "8b5cf6"
+  description: Significant change under discussion
+- name: question
+  color: "d876e3"
+  description: A question (consider Discussions instead)
+
+# --- Community / triage ---
+- name: good first issue
+  color: "7057ff"
+  description: Great for newcomers — well-scoped and mentor-friendly
+- name: help wanted
+  color: "008672"
+  description: Community contribution welcome
+- name: needs triage
+  color: "fbca04"
+  description: Awaiting maintainer review
+- name: duplicate
+  color: "cfd3d7"
+  description: This already exists
+- name: wontfix
+  color: "ffffff"
+  description: This will not be worked on
+- name: stale
+  color: "795548"
+  description: No recent activity; will be closed if it stays inactive
+
+# --- Area ---
+- name: "area: concepts"
+  color: "fef2c0"
+  description: LLMs, transformers, tokenization, embeddings
+- name: "area: prompting"
+  color: "fef2c0"
+  description: Prompt engineering, structured output, tool calling
+- name: "area: rag"
+  color: "fef2c0"
+  description: Retrieval-augmented generation
+- name: "area: agents"
+  color: "fef2c0"
+  description: Agents, planning, memory, MCP, multi-agent
+- name: "area: multimodal"
+  color: "fef2c0"
+  description: Vision and speech
+- name: "area: production"
+  color: "fef2c0"
+  description: Evaluation, security, deployment, MLOps
+
+# --- Meta ---
+- name: dependencies
+  color: "0366d6"
+  description: Dependency updates (Dependabot)
+- name: ci
+  color: "bfdadc"
+  description: CI/CD and automation
+- name: tooling
+  color: "bfdadc"
+  description: Repo tooling and configs
+- name: "priority: high"
+  color: "b60205"
+  description: Bump to the top of the queue
+- name: documentation-site
+  color: "5319e7"
+  description: The MkDocs website itself

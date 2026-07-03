@@ -1,0 +1,66 @@
+name: 🐛 Content Error or Bug
+description: Report a wrong fact, broken link, typo, or code that doesn't run.
+title: "[bug]: "
+labels: ["bug", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep Bee accurate! 🐝 Small fixes are hugely valuable.
+        If you can fix it yourself, feel free to skip straight to a PR — see
+        [CONTRIBUTING.md](https://github.com/bee-ai-labs/bee/blob/main/CONTRIBUTING.md).
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem is this?
+      options:
+        - Wrong or misleading information
+        - Broken link
+        - Typo / grammar
+        - Code example doesn't run
+        - Diagram is wrong or unclear
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Where is it?
+      description: File path or page URL (e.g. docs/rag/chunking.md or the /rag/chunking page).
+      placeholder: docs/concepts/embeddings.md
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the problem. Quote the incorrect text if helpful.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it say / do instead?
+      description: If you know the fix, tell us! Links to sources are extra helpful.
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment (for code that doesn't run)
+      description: OS, Python version, and the exact error message (as text).
+      placeholder: |
+        macOS 14, Python 3.11
+        Error: ModuleNotFoundError: No module named 'anthropic'
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and didn't find a duplicate.
+          required: true
+        - label: This is a specific, actionable problem (open-ended questions go in Discussions).
+          required: true

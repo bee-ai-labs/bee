@@ -1,0 +1,30 @@
+# CODEOWNERS — who gets auto-requested for review on which paths.
+# https://docs.github.com/en/repositories/managing-your-repositories-settings-and-features/customizing-your-repository/about-code-owners
+#
+# As the community grows, reviewers add themselves next to the areas they steward.
+# Until then, the core maintainers own everything. Replace @bee-ai-labs/maintainers with
+# real handles/teams once the org is set up.
+
+# Default owners for everything
+*                       @bee-ai-labs/maintainers
+
+# Documentation sections (reviewers: add yourself to your area)
+/docs/concepts/         @bee-ai-labs/maintainers
+/docs/prompting/        @bee-ai-labs/maintainers
+/docs/rag/              @bee-ai-labs/maintainers
+/docs/agents/           @bee-ai-labs/maintainers
+/docs/vision/           @bee-ai-labs/maintainers
+/docs/speech/           @bee-ai-labs/maintainers
+/docs/evaluation/       @bee-ai-labs/maintainers
+/docs/security/         @bee-ai-labs/maintainers
+/docs/deployment/       @bee-ai-labs/maintainers
+/docs/mlops/            @bee-ai-labs/maintainers
+
+# Runnable examples
+/examples/              @bee-ai-labs/maintainers
+
+# Repo infrastructure (higher bar for review)
+/.github/               @bee-ai-labs/maintainers
+/mkdocs.yml             @bee-ai-labs/maintainers
+/scripts/               @bee-ai-labs/maintainers
+/LICENSE                @bee-ai-labs/maintainers

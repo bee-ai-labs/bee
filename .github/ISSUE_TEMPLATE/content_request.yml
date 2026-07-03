@@ -1,0 +1,68 @@
+name: 📝 Content Request
+description: Suggest a new tutorial, concept page, example, or topic to cover.
+title: "[content]: "
+labels: ["content", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want Bee to cover something? Tell us! Popular requests become `[WANTED]` topics that
+        contributors can claim. Even better — consider writing it yourself with our
+        [templates](https://github.com/bee-ai-labs/bee/blob/main/CONTRIBUTING.md). 🐝
+  - type: input
+    id: topic
+    attributes:
+      label: What topic should we cover?
+      placeholder: "e.g. Semantic chunking strategies for RAG"
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which section does it belong in?
+      options:
+        - Concepts
+        - Prompting
+        - RAG
+        - Agents
+        - Vision
+        - Speech
+        - Evaluation
+        - Security
+        - Deployment
+        - MLOps
+        - Examples
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Target difficulty
+      options:
+        - 🟢 Beginner
+        - 🟡 Intermediate
+        - 🔴 Advanced
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this valuable?
+      description: What will readers be able to do after reading it? What problem does it solve?
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Helpful references
+      description: Papers, docs, or articles that could inform the content.
+    validations:
+      required: false
+  - type: checkboxes
+    id: offer
+    attributes:
+      label: Would you like to write it?
+      options:
+        - label: I'd be interested in contributing this content myself (we'll help!).
+          required: false

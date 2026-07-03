@@ -1,0 +1,77 @@
+name: CI
+
+# Quality gates for every push and pull request. These mirror the local checks
+# documented in CONTRIBUTING.md so contributors can reproduce them.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  format:
+    name: Prettier (format)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npx --yes prettier@3 --check .
+
+  markdownlint:
+    name: markdownlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npx --yes markdownlint-cli2 "**/*.md" "#node_modules" "#site"
+
+  spellcheck:
+    name: cspell (spelling)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npx --yes cspell@8 "**/*.md" --no-progress --show-suggestions
+
+  links:
+    name: Link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Markdown links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --exclude-mail
+            --exclude '^https://github\.com/bee-ai/'
+            --exclude 'discord\.gg'
+            './**/*.md'
+          fail: true
+
+  docs-build:
+    name: Build docs site (strict)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r docs/requirements.txt
+      - name: Build with --strict (fails on broken nav or bad refs)
+        run: mkdocs build --strict

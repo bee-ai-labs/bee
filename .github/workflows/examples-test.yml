@@ -1,0 +1,60 @@
+name: Test Examples
+
+# Runs each example's test suite so "every example runs" stays true over time.
+# Uses uv for fast, reproducible installs. Only triggers when examples change.
+
+on:
+  push:
+    branches: [main]
+    paths: ["examples/**"]
+  pull_request:
+    paths: ["examples/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    name: Discover testable examples
+    runs-on: ubuntu-latest
+    outputs:
+      examples: ${{ steps.find.outputs.examples }}
+      any: ${{ steps.find.outputs.any }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: find
+        name: Find examples that contain tests
+        run: |
+          dirs=$(find examples -mindepth 1 -maxdepth 1 -type d \
+                   -not -name '_TEMPLATE' \
+                   -exec sh -c 'ls "$1"/tests/*.py "$1"/test_*.py >/dev/null 2>&1 && echo "$1"' _ {} \; \
+                 | jq -R -s -c 'split("\n") | map(select(length>0))')
+          echo "examples=$dirs" >> "$GITHUB_OUTPUT"
+          if [ "$dirs" = "[]" ] || [ -z "$dirs" ]; then
+            echo "any=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "any=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  test:
+    name: Test ${{ matrix.example }}
+    needs: discover
+    if: needs.discover.outputs.any == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        example: ${{ fromJson(needs.discover.outputs.examples) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install and test
+        working-directory: ${{ matrix.example }}
+        # Tests must not require real API keys — mock the provider or skip network tests.
+        run: |
+          uv sync --all-extras --dev || uv sync
+          uv run pytest -q

@@ -1,0 +1,33 @@
+name: Lint PR Title
+
+# Enforces Conventional Commit PR titles (used for the changelog and tidy history).
+# Examples: "docs(rag): add reranking diagram", "fix(examples): pin anthropic version".
+
+on:
+  pull_request_target:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            docs
+            feat
+            fix
+            chore
+            refactor
+            test
+            ci
+            style
+          requireScope: false
+          subjectPattern: ^(?![A-Z]).+$
+          subjectPatternError: |
+            The subject "{subject}" should start with a lowercase letter.

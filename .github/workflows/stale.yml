@@ -1,0 +1,39 @@
+name: Close Stale Issues and PRs
+
+# Gently nudges inactive issues/PRs, then closes them if they stay quiet.
+# Runs daily. "good first issue" and "help wanted" are exempt so newcomers always
+# have work to pick up.
+
+on:
+  schedule:
+    - cron: "30 2 * * *" # 02:30 UTC daily
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 45
+          days-before-close: 14
+          stale-issue-label: stale
+          stale-pr-label: stale
+          exempt-issue-labels: "good first issue,help wanted,proposal,priority: high"
+          exempt-pr-labels: "help wanted,proposal"
+          stale-issue-message: >
+            This issue has been quiet for a while. 🐝 Is it still relevant? A comment keeps it
+            open — otherwise it'll be closed in 14 days to keep the tracker tidy. Thanks!
+          stale-pr-message: >
+            This PR has been inactive for a while. Need help getting it over the line? Leave a
+            comment! Otherwise it'll be closed in 14 days — you can always reopen it.
+          close-issue-message: >
+            Closing due to inactivity. This isn't a judgment on the idea — feel free to reopen or
+            open a fresh issue anytime. 💛
+          close-pr-message: >
+            Closing due to inactivity. Thank you for the contribution — please reopen whenever
+            you'd like to continue!

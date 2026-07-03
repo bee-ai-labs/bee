@@ -1,0 +1,31 @@
+version: 2
+updates:
+  # Python dependencies in example projects and the docs toolchain.
+  - package-ecosystem: "pip"
+    directory: "/docs"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels: ["dependencies", "tooling"]
+    commit-message:
+      prefix: "chore(deps)"
+
+  # Keep GitHub Actions pinned and current.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels: ["dependencies", "ci"]
+    commit-message:
+      prefix: "ci(deps)"
+
+  # Example projects: Dependabot scans each ecosystem it finds under examples/.
+  # (Add per-example entries here as the fleet grows, or rely on the wildcard scan.)
+  - package-ecosystem: "pip"
+    directory: "/examples"
+    schedule:
+      interval: "monthly"
+    labels: ["dependencies", "example"]
+    commit-message:
+      prefix: "chore(deps)"

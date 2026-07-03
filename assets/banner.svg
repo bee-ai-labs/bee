@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img"
+     aria-label="Bee — the open-source AI knowledge hive">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1206"/>
+      <stop offset="0.55" stop-color="#2a1e08"/>
+      <stop offset="1" stop-color="#3a2a05"/>
+    </linearGradient>
+    <linearGradient id="honey" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD54A"/>
+      <stop offset="1" stop-color="#F5A623"/>
+    </linearGradient>
+    <!-- Honeycomb tile -->
+    <pattern id="comb" width="56" height="96" patternUnits="userSpaceOnUse"
+             patternTransform="scale(1.1)">
+      <g fill="none" stroke="#F5A623" stroke-width="2" opacity="0.12">
+        <polygon points="28,2 52,16 52,44 28,58 4,44 4,16"/>
+        <polygon points="28,50 52,64 52,92 28,106 4,92 4,64"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <rect width="1200" height="320" fill="url(#comb)"/>
+
+  <!-- Logo mark -->
+  <g transform="translate(90,110) scale(1.4)">
+    <polygon points="32,4 55,18 55,46 32,60 9,46 9,18"
+             fill="url(#honey)" stroke="#8A5A00" stroke-width="2"/>
+    <ellipse cx="32" cy="33" rx="9" ry="11" fill="#1a1206"/>
+    <line x1="24.5" y1="30" x2="39.5" y2="30" stroke="#FFD54A" stroke-width="2" stroke-linecap="round"/>
+    <line x1="24" y1="35" x2="40" y2="35" stroke="#FFD54A" stroke-width="2" stroke-linecap="round"/>
+    <g fill="#FFFFFF" opacity="0.9" stroke="#8A5A00" stroke-width="1">
+      <ellipse cx="25" cy="24" rx="6" ry="4" transform="rotate(-25 25 24)"/>
+      <ellipse cx="39" cy="24" rx="6" ry="4" transform="rotate(25 39 24)"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="230" y="150" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="96" font-weight="800" fill="url(#honey)">Bee</text>
+  <text x="234" y="200" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="600" fill="#FFE9B0">The open-source AI knowledge hive.</text>
+  <text x="234" y="240" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="400" fill="#C9B583" letter-spacing="2">
+    Learn AI &#160;·&#160; Build AI &#160;·&#160; Share AI
+  </text>
+
+  <!-- Topic chips -->
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600">
+    <g transform="translate(234,270)">
+      <rect width="90"  height="32" rx="16" fill="#F5A623" opacity="0.15" stroke="#F5A623"/>
+      <text x="45" y="21" text-anchor="middle" fill="#FFD54A">LLMs</text>
+    </g>
+    <g transform="translate(336,270)">
+      <rect width="80"  height="32" rx="16" fill="#F5A623" opacity="0.15" stroke="#F5A623"/>
+      <text x="40" y="21" text-anchor="middle" fill="#FFD54A">RAG</text>
+    </g>
+    <g transform="translate(428,270)">
+      <rect width="100" height="32" rx="16" fill="#F5A623" opacity="0.15" stroke="#F5A623"/>
+      <text x="50" y="21" text-anchor="middle" fill="#FFD54A">Agents</text>
+    </g>
+    <g transform="translate(540,270)">
+      <rect width="130" height="32" rx="16" fill="#F5A623" opacity="0.15" stroke="#F5A623"/>
+      <text x="65" y="21" text-anchor="middle" fill="#FFD54A">Prompting</text>
+    </g>
+    <g transform="translate(682,270)">
+      <rect width="150" height="32" rx="16" fill="#F5A623" opacity="0.15" stroke="#F5A623"/>
+      <text x="75" y="21" text-anchor="middle" fill="#FFD54A">Production</text>
+    </g>
+  </g>
+</svg>
