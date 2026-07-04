@@ -1,9 +1,10 @@
 # CODEOWNERS — who gets auto-requested for review on which paths.
 # https://docs.github.com/en/repositories/managing-your-repositories-settings-and-features/customizing-your-repository/about-code-owners
 #
-# As the community grows, reviewers add themselves next to the areas they steward.
-# Until then, the core maintainers own everything. Replace @bee-ai-labs/maintainers with
-# real handles/teams once the org is set up.
+# Uses the @bee-ai-labs/maintainers team. For GitHub to resolve it, the team must be
+# (1) publicly visible and (2) have WRITE access to this repo
+# (Repo → Settings → Collaborators and teams → Add teams → maintainers → Write).
+# Reviewers can add themselves next to specific areas as the community grows.
 
 # Default owners for everything
 *                       @bee-ai-labs/maintainers
