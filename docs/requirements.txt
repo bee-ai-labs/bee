@@ -2,5 +2,5 @@
 #   pip install -r docs/requirements.txt
 mkdocs-material>=9.5,<10
 mkdocs-material[imaging]  # social cards + optimized images
-pymdown-extensions>=10.7
+pymdown-extensions>=11.0.1
 mkdocs-minify-plugin>=0.8
