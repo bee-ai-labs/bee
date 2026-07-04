@@ -58,8 +58,13 @@ jobs:
           # Emails are excluded by default in lychee v0.23+. Exclude our own org
           # (pages like Discussions/Projects may not be enabled yet), the not-yet-live
           # docs domain, chat invites, and local dev URLs used in examples/guides.
+          # Retries + wait make the check resilient to transient network blips
+          # (e.g. a remote host resetting the connection) instead of failing CI.
           args: >-
             --no-progress
+            --max-retries 5
+            --retry-wait-time 3
+            --timeout 30
             --exclude 'bee-ai-labs'
             --exclude 'bee\.atomiq\.rw'
             --exclude 'discord\.gg'
