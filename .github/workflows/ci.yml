@@ -67,7 +67,6 @@ jobs:
             --timeout 30
             --exclude 'bee-ai-labs'
             --exclude 'bee\.atomiq\.rw'
-            --exclude 'discord\.gg'
             --exclude 'localhost'
             --exclude '127\.0\.0\.1'
             --exclude 'example\.(com|org)'

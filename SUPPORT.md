@@ -10,7 +10,6 @@ help us help you faster.
 | Ask a question or discuss an idea | [**GitHub Discussions**](https://github.com/bee-ai-labs/bee/discussions) |
 | Report a wrong fact, broken link, or bug | [**Open an issue**](https://github.com/bee-ai-labs/bee/issues/new/choose) |
 | Request new content on a topic | [**Content request issue**](https://github.com/bee-ai-labs/bee/issues/new/choose) |
-| Chat with the community in real time | [**Discord**](https://discord.gg/bee-ai) |
 | Report a security problem | [**SECURITY.md**](SECURITY.md) (do **not** open a public issue) |
 | Report Code of Conduct concerns | niyitegekatresor@gmail.com |
 

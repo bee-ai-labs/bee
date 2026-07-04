@@ -117,9 +117,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/bee-ai-labs/bee
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/bee-ai
-      name: Join the hive on Discord
   tags:
     Beginner: beginner
     Intermediate: intermediate
