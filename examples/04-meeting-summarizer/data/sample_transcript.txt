@@ -1,0 +1,22 @@
+[00:00] Alice: Thanks everyone for joining the weekly product sync. Let's start with the launch.
+
+[00:12] Bob: The beta went out to 50 users. Feedback is mostly positive, but three people hit a
+crash when uploading large files.
+
+[00:40] Alice: Okay, that's a blocker. Bob, can you investigate the upload crash and report back
+by Friday?
+
+[00:52] Bob: Yes, I'll dig into it and share findings by Friday.
+
+[01:10] Carol: On the docs side, the getting-started guide is out of date since the API change.
+
+[01:20] Alice: Carol, please update the getting-started guide before the public launch next week.
+
+[01:35] Carol: Will do. I'll have it ready by Wednesday.
+
+[01:50] Alice: Great. Last thing — we need a decision on pricing. Let's schedule a separate
+meeting for that. Bob, can you set it up for early next week?
+
+[02:05] Bob: Sure, I'll send an invite for Monday.
+
+[02:15] Alice: Perfect. Thanks all, that's a wrap.

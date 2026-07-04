@@ -165,9 +165,11 @@ nav:
       - Vision:
           - vision/index.md
           - Multimodal LLMs: vision/multimodal-llms.md
+          - OCR: vision/ocr.md
       - Speech:
           - speech/index.md
           - Speech-to-Text (ASR): speech/speech-to-text.md
+          - Text-to-Speech (TTS): speech/text-to-speech.md
       - Evaluation:
           - evaluation/index.md
           - LLM-as-Judge: evaluation/llm-as-judge.md

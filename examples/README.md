@@ -15,6 +15,7 @@ no "coming soon."
 | 01 | [chatbot](01-chatbot/) | Streaming chat, conversation memory, cost tracking | 🟢 |
 | 02 | [rag-document-qa](02-rag-document-qa/) | Chunking, embeddings, retrieval, cited answers | 🟡 |
 | 03 | [research-agent](03-research-agent/) | Tool use, the agent loop, multi-step reasoning | 🔴 |
+| 04 | [meeting-summarizer](04-meeting-summarizer/) | Map-reduce summarization + structured action items | 🟡 |
 
 More are on the [roadmap](../ROADMAP.md) — and this is a great place to
 [contribute](../CONTRIBUTING.md).

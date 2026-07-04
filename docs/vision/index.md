@@ -93,7 +93,7 @@ This section is early. We'd love contributions on the topics below — claim one
 [opening an issue](https://github.com/bee-ai-labs/bee/issues/new/choose):
 
 - ✅ **[Multimodal LLMs](multimodal-llms.md)** — how image tokens work, cost, structured extraction 🟡
-- `[WANTED]` **OCR pipelines** — Tesseract vs. cloud vs. multimodal LLMs 🟡
+- ✅ **[OCR](ocr.md)** — Tesseract, preprocessing, OCR→LLM pipelines 🟡
 - `[WANTED]` **Object detection with YOLO** — a runnable example 🟡
 - `[WANTED]` **Diffusion models explained** — how image generation works 🔴
 - `[WANTED]` **Document QA example** — invoices/receipts to structured data 🟡

@@ -168,3 +168,14 @@ irreproducible
 spectrogram
 captioning
 downscale
+coqui
+ssml
+denoise
+denoising
+deskew
+grayscale
+streamable
+prosody
+binarize
+autocontrast
+pytesseract

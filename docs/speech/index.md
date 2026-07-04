@@ -62,7 +62,7 @@ Claim a topic by [opening an issue](https://github.com/bee-ai-labs/bee/issues/ne
 
 - ✅ **[Speech-to-Text (ASR)](speech-to-text.md)** — Whisper, timestamps, model sizing 🟡
 - `[WANTED]` **Real-time voice pipelines** — streaming, VAD, barge-in 🔴
-- `[WANTED]` **TTS options compared** — quality, latency, cost 🟡
+- ✅ **[Text-to-Speech (TTS)](text-to-speech.md)** — local vs hosted, streaming, SSML 🟡
 - `[WANTED]` **Speaker diarization** — who said what 🔴
 - `[WANTED]` **Meeting assistant example** — record → transcribe → summarize 🟡
 
