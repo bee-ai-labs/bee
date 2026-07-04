@@ -60,7 +60,7 @@ print(result["text"])
 
 Claim a topic by [opening an issue](https://github.com/bee-ai-labs/bee/issues/new/choose):
 
-- `[WANTED]` **Whisper deep-dive** — models, timestamps, languages, fine-tuning 🟡
+- ✅ **[Speech-to-Text (ASR)](speech-to-text.md)** — Whisper, timestamps, model sizing 🟡
 - `[WANTED]` **Real-time voice pipelines** — streaming, VAD, barge-in 🔴
 - `[WANTED]` **TTS options compared** — quality, latency, cost 🟡
 - `[WANTED]` **Speaker diarization** — who said what 🔴

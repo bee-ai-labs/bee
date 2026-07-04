@@ -75,7 +75,7 @@ agent has an email tool, that's a real breach.
 
 Claim a topic by [opening an issue](https://github.com/bee-ai-labs/bee/issues/new/choose):
 
-- `[WANTED]` **Prompt injection playbook** — attacks + layered defenses 🔴
+- ✅ **[Prompt Injection](prompt-injection.md)** — direct/indirect attacks + layered defenses 🔴
 - `[WANTED]` **Guardrails in practice** — input/output filtering 🟡
 - `[WANTED]` **PII detection & redaction** — before prompts and logs 🟡
 - `[WANTED]` **Authentication & rate limiting for LLM APIs** 🟡

@@ -162,3 +162,9 @@ MTEB
 OASST
 GGUF
 GPTQ
+pointwise
+denoised
+irreproducible
+spectrogram
+captioning
+downscale

@@ -62,7 +62,7 @@ By the end of this section you will be able to:
 Claim a topic by [opening an issue](https://github.com/bee-ai-labs/bee/issues/new/choose):
 
 - `[WANTED]` **Building an eval harness** — datasets, runners, tracking 🟡
-- `[WANTED]` **LLM-as-judge, done right** — rubrics, bias, validation 🔴
+- ✅ **[LLM-as-Judge](llm-as-judge.md)** — rubrics, pairwise, bias, validation 🔴
 - `[WANTED]` **Detecting hallucinations** — groundedness/faithfulness metrics 🔴
 - `[WANTED]` **Benchmarks explained** — MMLU, GSM8K, and their limits 🟡
 - See also RAG's own [evaluation guide](../rag/evaluation.md).

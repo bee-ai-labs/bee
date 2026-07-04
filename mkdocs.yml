@@ -162,10 +162,18 @@ nav:
       - Multi-Agent Systems: agents/multi-agent.md
       - Model Context Protocol (MCP): agents/mcp.md
   - More Topics:
-      - Vision: vision/index.md
-      - Speech: speech/index.md
-      - Evaluation: evaluation/index.md
-      - Security: security/index.md
+      - Vision:
+          - vision/index.md
+          - Multimodal LLMs: vision/multimodal-llms.md
+      - Speech:
+          - speech/index.md
+          - Speech-to-Text (ASR): speech/speech-to-text.md
+      - Evaluation:
+          - evaluation/index.md
+          - LLM-as-Judge: evaluation/llm-as-judge.md
+      - Security:
+          - security/index.md
+          - Prompt Injection: security/prompt-injection.md
       - Deployment: deployment/index.md
       - MLOps: mlops/index.md
   - Contributing:

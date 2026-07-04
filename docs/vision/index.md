@@ -92,7 +92,7 @@ print(response.content[0].text)
 This section is early. We'd love contributions on the topics below — claim one by
 [opening an issue](https://github.com/bee-ai-labs/bee/issues/new/choose):
 
-- `[WANTED]` **Multimodal LLMs deep-dive** — how image tokens work, cost, limits 🟡
+- ✅ **[Multimodal LLMs](multimodal-llms.md)** — how image tokens work, cost, structured extraction 🟡
 - `[WANTED]` **OCR pipelines** — Tesseract vs. cloud vs. multimodal LLMs 🟡
 - `[WANTED]` **Object detection with YOLO** — a runnable example 🟡
 - `[WANTED]` **Diffusion models explained** — how image generation works 🔴
