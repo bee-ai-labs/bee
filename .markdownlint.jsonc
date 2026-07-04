@@ -4,13 +4,9 @@
   // technical writing legitimately needs flexibility.
   "default": true,
 
-  // Line length: prose wraps naturally; don't fight long links, tables, or code.
-  "MD013": {
-    "line_length": 120,
-    "code_blocks": false,
-    "tables": false,
-    "headings": false
-  },
+  // Line length: disabled. Badge rows and link-rich grid-card bullets legitimately
+  // exceed any sane limit and must stay on one line to render correctly.
+  "MD013": false,
 
   // Allow inline HTML — we use <div align="center">, <details>, <img>, badges.
   "MD033": false,
@@ -25,5 +21,32 @@
   "MD029": { "style": "ordered" },
 
   // Emphasis-as-heading is intentional in a few callouts.
-  "MD036": false
+  "MD036": false,
+
+  // --- Rules disabled because they conflict with deliberate content choices ---
+
+  // MD060 (new): cosmetic table-pipe spacing. Our compact tables render fine on GitHub.
+  "MD060": false,
+
+  // MD049: emphasis style consistency (_ vs *). We use both intentionally in prose.
+  "MD049": false,
+
+  // MD046: code-block style. pymdownx tabbed/admonition blocks are indented, so a
+  // single "fenced vs indented" style can't be enforced consistently.
+  "MD046": false,
+
+  // MD034: bare URLs/emails. We intentionally show contact emails as plain text.
+  "MD034": false,
+
+  // MD038: spaces inside code spans. Intentional — e.g. tokens like ` is` demonstrate
+  // that the leading space is part of the token (see concepts/tokenization).
+  "MD038": false,
+
+  // MD032: lists surrounded by blanks. Our grid-card lists live inside HTML <div> blocks
+  // where added blank lines would break the Material card rendering.
+  "MD032": false,
+
+  // MD051: link fragments. GitHub's emoji-heading slugs (e.g. #-repository-structure)
+  // are valid on GitHub but flagged by markdownlint's differing slug algorithm.
+  "MD051": false,
 }

@@ -1,5 +1,10 @@
+# Markdown is owned by markdownlint (the two tools disagree on Markdown formatting).
+*.md
+
+# MkDocs config uses YAML custom tags (!!python/name:...) that generic tooling mishandles.
+mkdocs.yml
+
 site/
 node_modules/
 .venv/
 *.min.*
-CHANGELOG.md

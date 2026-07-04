@@ -28,6 +28,5 @@ jobs:
             ci
             style
           requireScope: false
-          subjectPattern: ^(?![A-Z]).+$
-          subjectPatternError: |
-            The subject "{subject}" should start with a lowercase letter.
+          # No subject-case rule: this keeps automated PRs (e.g. Dependabot's
+          # "Bump ..."/"Update ...") passing while still enforcing a valid type prefix.
