@@ -60,7 +60,7 @@ jobs:
           # docs domain, chat invites, and local dev URLs used in examples/guides.
           args: >-
             --no-progress
-            --exclude 'github\.com/bee-ai-labs'
+            --exclude 'bee-ai-labs'
             --exclude 'bee\.atomiq\.rw'
             --exclude 'discord\.gg'
             --exclude 'localhost'
