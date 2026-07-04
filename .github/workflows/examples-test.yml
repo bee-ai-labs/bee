@@ -22,7 +22,7 @@ jobs:
       examples: ${{ steps.find.outputs.examples }}
       any: ${{ steps.find.outputs.any }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - id: find
         name: Find examples that contain tests
         run: |
@@ -47,7 +47,7 @@ jobs:
       matrix:
         example: ${{ fromJson(needs.discover.outputs.examples) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v5
       - uses: actions/setup-python@v6
         with:
