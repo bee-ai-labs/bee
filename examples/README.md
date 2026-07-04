@@ -1,8 +1,7 @@
 # Examples 🏃
 
 Self-contained, **runnable** AI projects. Each folder is an independent project with its own
-dependencies, a `.env.example`, and tests — clone it, add an API key, and run it. No pseudo-code,
-no "coming soon."
+dependencies, a `.env.example`, and tests — clone it, add an API key, and run it. No pseudo-code.
 
 > [!NOTE]
 > **The golden rule:** if it doesn't run, it doesn't merge. Every example is tested in

@@ -34,8 +34,7 @@
 
 > [!NOTE]
 > **Bee is not an AI application.** It is a *knowledge base* — a curated, beautifully
-> organized library of everything a developer needs to learn and build with AI. Every page
-> is finished and useful. No placeholders, no "coming soon."
+> organized library of everything a developer needs to learn and build with AI.
 
 ## 📖 Table of Contents
 

@@ -21,7 +21,7 @@ we defend against.
 
 - Use GitHub's [**private vulnerability reporting**](https://github.com/bee-ai-labs/bee/security/advisories/new)
   (Security → Report a vulnerability), **or**
-- Email **security@bee-ai.dev** with details.
+- Email **niyitegekatresor@gmail.com** with details.
 
 Please include:
 
