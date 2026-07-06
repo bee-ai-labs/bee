@@ -1,6 +1,7 @@
 """CLI entry point: `python -m app`."""
 from __future__ import annotations
 
+import utils.session
 import os
 import sys
 
