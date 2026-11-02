@@ -44,3 +44,4 @@ Thumbs.db
 data/local/
 chroma/
 *.sqlite3
+config.bat
